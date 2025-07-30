@@ -1,28 +1,28 @@
-# 🚀 Amazon Clone - A Frontend Showcase
+# Shopping Homepage - A Frontend Showcase 🚀
 
-A feature-rich, responsive clone of the Amazon homepage built with modern web technologies. This project was created to practice and demonstrate skills in HTML, Tailwind CSS, and advanced JavaScript functionalities.
+An Amazon-inspired, feature-rich, and responsive e-commerce homepage built with modern web technologies. This project was created to practice and demonstrate skills in HTML, Tailwind CSS, and advanced JavaScript functionalities.
 
-**🔴 Live Demo:** [Yahan Apne Project ka Live Link Daalein]
-
----
-
-## 📸 Project Screenshots
-
-<p align="center">
-  <img src="./images/Screenshot 1 (2).jpg" alt="Project Screenshot 1 (2).jpg" width="48%"/>
-  <img src="./images/screenshot 2.jpg" alt="Project Screenshot 2" width="48%"/> 
-</p>
-<p align="center">
-  <img src="./images/screenshot 3.jpg" alt="Project Screenshot 3" width="48%"/>
-  <img src="./images/screenshot 4.jpg" alt="Project Screenshot 4" width="48%"/>
-</p>
+**🔴 Live Demo:** [https://jatin2004-code.github.io/Shopping-Homepage/](https://jatin2004-code.github.io/Shopping-Homepage/)
 
 ---
 
-## ✨ Features
+### 📸 Project Preview
 
-* **🎨 Modern UI/UX:** A clean and professional layout mimicking the real Amazon website.
-* **📱 Fully Responsive:** Looks great on all devices, from mobile phones to desktops.
+<!-- 
+**Important Note:** For best results, rename your image files to something simple without spaces, like `screenshot-1.jpg`, `screenshot-2.jpg`, etc. Then, update the paths below.
+-->
+
+| | |
+| :---: | :---: |
+| <img src="./Screenshot 1 (2).jpg" alt="Homepage Hero Section" width="100%"/> |
+
+
+---
+
+### ✨ Features
+
+* **🎨 Modern UI/UX:** A clean and professional layout inspired by leading e-commerce websites.
+* **📱 Fully Responsive:** Seamlessly adapts to all screen sizes, from mobile phones to desktops.
 * **🎬 Ken Burns Hero Effect:** A dynamic hero section with a subtle and elegant zoom animation, built with pure CSS.
 * **↔️ Interactive Sliders:** "Inspired by your history" section with a horizontal product slider, controlled by JavaScript.
 * **🔍 Functional Search Bar:** A working search bar with an interactive modal that includes an image.
@@ -30,7 +30,7 @@ A feature-rich, responsive clone of the Amazon homepage built with modern web te
 
 ---
 
-## 🛠️ Tech Stack Used
+### 🛠️ Tech Stack Used
 
 * **HTML5:** For the structure and semantics of the website.
 * **Tailwind CSS:** For modern, utility-first, and responsive styling.
@@ -39,21 +39,21 @@ A feature-rich, responsive clone of the Amazon homepage built with modern web te
 
 ---
 
-## 🚀 How to Run Locally
+### 🚀 How to Run Locally
 
 1.  Clone the repository to your local machine:
     ```bash
-    git clone [https://github.com/Jatin2004-code/amazon-clone.git](https://github.com/Jatin2004-code/amazon-clone.git)
+    git clone [https://github.com/Jatin2004-code/Shopping-Homepage.git](https://github.com/Jatin2004-code/Shopping-Homepage.git)
     ```
 2.  Navigate into the project directory:
     ```bash
-    cd amazon-clone
+    cd Shopping-Homepage
     ```
 3.  Open the `index.html` file in your favorite browser.
 
 ---
 
-## 🤝 Connect with Me
+### 🤝 Connect with Me
 
 Feel free to reach out if you have any questions or suggestions!
 
