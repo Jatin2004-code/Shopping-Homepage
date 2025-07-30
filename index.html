@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Clone - Professional Version</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Custom styles for hover border and scrollbar */
+        .border-hover {
+            border: 1.5px solid transparent;
+            transition: border 0.2s;
+        }
+        .border-hover:hover {
+            border: 1.5px solid white;
+        }
+        /* Hide scrollbar but allow scrolling */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        /* Ken Burns Effect for Hero Section */
+        .hero-section {
+            overflow: hidden; /* Ensures the zoomed image doesn't spill out */
+        }
+        .hero-bg {
+            animation: kenburns 20s ease-out infinite;
+            background-size: cover;
+            background-position: center;
+        }
+        @keyframes kenburns {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-200 font-sans">
+
+    <!-- ======================= HEADER ======================= -->
+    <header class="bg-[#131921] text-white sticky top-0 z-50">
+        <!-- Main Navbar -->
+        <div class="flex items-center justify-between p-1">
+            <!-- Logo -->
+            <div class="p-2 border-hover rounded-sm">
+                <a href="#">
+                    <img src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="Amazon Logo" class="h-8 mt-2" onerror="this.onerror=null;this.src='https://placehold.co/100x30/131921/ffffff?text=Amazon';">
+                </a>
+            </div>
+
+            <!-- Deliver to Address -->
+            <div class="p-2 border-hover rounded-sm">
+                <p class="text-xs text-[#cccccc]">Deliver to</p>
+                <div class="flex items-center">
+                    <i class="fa-solid fa-location-dot mr-1"></i>
+                    <p class="text-sm font-bold">India</p>
+                </div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="flex-grow mx-4 flex">
+                <select class="bg-gray-200 text-black text-xs p-2 rounded-l-md border-r border-gray-400 hover:bg-gray-300 focus:outline-none">
+                    <option>All</option>
+                    <option>Electronics</option>
+                    <option>Fashion</option>
+                    <option>Books</option>
+                </select>
+                <input id="searchInput" type="text" placeholder="Search Amazon.in" class="w-full p-2 text-black focus:outline-none">
+                <button id="searchButton" class="bg-[#febd68] hover:bg-[#f3a847] p-2 rounded-r-md">
+                    <i class="fa-solid fa-magnifying-glass text-black text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Sign In & Accounts -->
+            <div class="p-2 border-hover rounded-sm">
+                <p class="text-xs">Hello, Jatin</p>
+                <p class="text-sm font-bold">Account & Lists</p>
+            </div>
+
+            <!-- Returns & Orders -->
+            <div class="p-2 border-hover rounded-sm">
+                <p class="text-xs">Returns</p>
+                <p class="text-sm font-bold">& Orders</p>
+            </div>
+
+            <!-- Cart -->
+            <div class="p-2 border-hover rounded-sm flex items-end">
+                <i class="fa-solid fa-cart-shopping text-3xl"></i>
+                <p class="text-sm font-bold ml-1">Cart</p>
+            </div>
+        </div>
+
+        <!-- Sub Navbar (Panel) -->
+        <div class="flex items-center bg-[#232f3e] text-white p-2 text-sm">
+            <div class="flex items-center font-bold mr-4 border-hover p-1 rounded-sm">
+                <i class="fa-solid fa-bars mr-1"></i>
+                <p>All</p>
+            </div>
+            <div class="flex space-x-4">
+                <a href="#" class="border-hover p-1 rounded-sm">Today's Deals</a>
+                <a href="#" class="border-hover p-1 rounded-sm">Customer Service</a>
+                <a href="#" class="border-hover p-1 rounded-sm">Registry</a>
+                <a href="#" class="border-hover p-1 rounded-sm">Gift Cards</a>
+                <a href="#" class="border-hover p-1 rounded-sm">Sell</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ======================= MAIN CONTENT ======================= -->
+    <main class="max-w-screen-2xl mx-auto">
+        <!-- Hero Section with Ken Burns Effect -->
+        <div class="relative hero-section h-80 md:h-[500px]">
+            <div class="hero-bg h-full w-full" style="background-image: url('hero_image.jpg');"></div>
+            <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-center items-center text-center text-white p-4">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4" style="text-shadow: 2px 2px 6px rgba(0,0,0,0.7);">Discover Endless Possibilities</h1>
+                <p class="text-lg md:text-xl max-w-2xl mb-6" style="text-shadow: 1px 1px 4px rgba(0,0,0,0.7);">Shop millions of products from thousands of brands. Find everything you need, all in one place.</p>
+                <a href="#" class="bg-yellow-400 text-gray-900 font-bold py-3 px-8 rounded-md hover:bg-yellow-500 transition-colors text-lg">Shop Now</a>
+            </div>
+        </div>
+
+        <!-- Product Cards Section -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6 -mt-20 relative z-10">
+            <!-- Card 1 -->
+            <div class="bg-white p-4 rounded-md shadow-md flex flex-col transform hover:scale-105 transition-transform duration-300">
+                <h2 class="text-xl font-bold mb-2">Upgrade your closet</h2>
+                <img src="box1_image.jpg" alt="Closet Organizers" class="h-64 w-full object-cover mb-2 rounded-md flex-grow">
+                <a href="#" class="text-blue-600 hover:underline mt-auto">See all offers</a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white p-4 rounded-md shadow-md flex flex-col transform hover:scale-105 transition-transform duration-300">
+                <h2 class="text-xl font-bold mb-2">Health & Personal Care</h2>
+                <img src="box2_image.jpg" alt="Personal Care" class="h-64 w-full object-cover mb-2 rounded-md flex-grow">
+                <a href="#" class="text-blue-600 hover:underline mt-auto">Shop now</a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white p-4 rounded-md shadow-md flex flex-col transform hover:scale-105 transition-transform duration-300">
+                <h2 class="text-xl font-bold mb-2">Discover home furniture</h2>
+                <img src="box3_image.jpg" alt="Home Furniture" class="h-64 w-full object-cover mb-2 rounded-md flex-grow">
+                <a href="#" class="text-blue-600 hover:underline mt-auto">Explore more</a>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-white p-4 rounded-md shadow-md flex flex-col transform hover:scale-105 transition-transform duration-300">
+                <h2 class="text-xl font-bold mb-2">Mobiles & Accessories</h2>
+                <img src="box4_image.jpg" alt="Mobiles" class="h-64 w-full object-cover mb-2 rounded-md flex-grow">
+                <a href="#" class="text-blue-600 hover:underline mt-auto">Discover more</a>
+            </div>
+        </div>
+
+        <!-- Second Row of Product Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-6 pb-6">
+            <!-- Card 5 -->
+            <div class="bg-white p-4 rounded-md shadow-md flex flex-col transform hover:scale-105 transition-transform duration-300">
+                <h2 class="text-xl font-bold mb-2">Beauty picks</h2>
+                <img src="box5_image.jpg" alt="Beauty Products" class="h-64 w-full object-cover mb-2 rounded-md flex-grow">
+                <a href="#" class="text-blue-600 hover:underline mt-auto">Shop now</a>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="bg-white p-4 rounded-md shadow-md flex flex-col transform hover:scale-105 transition-transform duration-300">
+                <h2 class="text-xl font-bold mb-2">For your furry friends</h2>
+                <img src="box6_image.jpg" alt="Pet Supplies" class="h-64 w-full object-cover mb-2 rounded-md flex-grow">
+                <a href="#" class="text-blue-600 hover:underline mt-auto">See more</a>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="bg-white p-4 rounded-md shadow-md flex flex-col transform hover:scale-105 transition-transform duration-300">
+                <h2 class="text-xl font-bold mb-2">New toys & games</h2>
+                <img src="box7_image.jpg" alt="Toys" class="h-64 w-full object-cover mb-2 rounded-md flex-grow">
+                <a href="#" class="text-blue-600 hover:underline mt-auto">Explore now</a>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="bg-white p-4 rounded-md shadow-md flex flex-col transform hover:scale-105 transition-transform duration-300">
+                <h2 class="text-xl font-bold mb-2">New arrivals in Fashion</h2>
+                <img src="box8_image.jpg" alt="Fashion" class="h-64 w-full object-cover mb-2 rounded-md flex-grow">
+                <a href="#" class="text-blue-600 hover:underline mt-auto">See all styles</a>
+            </div>
+        </div>
+        
+        <!-- ======================= NEW SLIDER SECTION ======================= -->
+        <div class="bg-white p-6 m-6 rounded-md shadow-md">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold">Inspired by your browsing history</h2>
+                <div>
+                    <button id="historyPrevBtn" class="bg-gray-200 hover:bg-gray-300 p-2 rounded-full mx-1"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button id="historyNextBtn" class="bg-gray-200 hover:bg-gray-300 p-2 rounded-full mx-1"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div id="historyContainer" class="flex space-x-4 overflow-x-auto scrollbar-hide pb-4">
+                <!-- History Items will be added by JS -->
+            </div>
+        </div>
+
+        <!-- ======================= SIGN IN CTA ======================= -->
+        <div class="border-t border-b border-gray-300 py-4 text-center">
+            <p class="text-sm">See personalized recommendations</p>
+            <a href="#" class="bg-yellow-400 hover:bg-yellow-500 font-bold text-sm py-2 px-20 rounded-md my-2 inline-block">Sign in</a>
+            <p class="text-xs">New customer? <a href="#" class="text-blue-600 hover:underline">Start here.</a></p>
+        </div>
+        
+        <!-- ======================= NEW APP PROMO SECTION ======================= -->
+        <div class="bg-white my-6">
+            <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8 p-8">
+                <div class="text-center md:text-left">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-2">Shop on the Amazon App</h2>
+                    <p class="text-gray-600 mb-4">Fast, convenient, and secure. All of Amazon at your fingertips.</p>
+                    <a href="#" class="bg-yellow-400 hover:bg-yellow-500 font-bold text-sm py-2 px-6 rounded-md inline-block">Download Now</a>
+                </div>
+                <div class="flex justify-center">
+                    <img src="brett-jordan-SZJXbAxkmEA-unsplash.jpg" alt="Amazon App" class="max-w-xs w-full rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ======================= FOOTER ======================= -->
+    <footer class="bg-[#232f3e] text-white">
+        <!-- Back to Top -->
+        <div class="bg-[#37475a] hover:bg-[#485769] text-center p-3 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+            <a>Back to top</a>
+        </div>
+        <!-- Footer content remains the same -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 p-10">
+            <div><h3 class="font-bold mb-2">Get to Know Us</h3><ul class="text-sm space-y-2 text-gray-300"><li><a href="#" class="hover:underline">About Us</a></li><li><a href="#" class="hover:underline">Careers</a></li><li><a href="#" class="hover:underline">Press Releases</a></li><li><a href="#" class="hover:underline">Amazon Science</a></li></ul></div>
+            <div><h3 class="font-bold mb-2">Connect with Us</h3><ul class="text-sm space-y-2 text-gray-300"><li><a href="#" class="hover:underline">Facebook</a></li><li><a href="#" class="hover:underline">Twitter</a></li><li><a href="#" class="hover:underline">Instagram</a></li></ul></div>
+            <div><h3 class="font-bold mb-2">Make Money with Us</h3><ul class="text-sm space-y-2 text-gray-300"><li><a href="#" class="hover:underline">Sell on Amazon</a></li><li><a href="#" class="hover:underline">Sell under Amazon Accelerator</a></li><li><a href="#" class="hover:underline">Become an Affiliate</a></li><li><a href="#" class="hover:underline">Advertise Your Products</a></li></ul></div>
+            <div><h3 class="font-bold mb-2">Let Us Help You</h3><ul class="text-sm space-y-2 text-gray-300"><li><a href="#" class="hover:underline">COVID-19 and Amazon</a></li><li><a href="#" class="hover:underline">Your Account</a></li><li><a href="#" class="hover:underline">Returns Centre</a></li><li><a href="#" class="hover:underline">Help</a></li></ul></div>
+        </div>
+        <div class="bg-[#131921] text-center p-6 border-t border-gray-700"><img src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="Amazon Logo" class="h-7 mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/100x30/131921/ffffff?text=Amazon';"><p class="text-xs text-gray-400">&copy; 1996-2025, Amazon.com, Inc. or its affiliates</p></div>
+    </footer>
+
+    <!-- Search Modal -->
+    <div id="searchModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white p-8 rounded-lg shadow-xl text-center flex flex-col items-center">
+            <img id="searchImage" src="shutter-speed-0uMU42uRw28-unsplash.jpg" alt="Search Icon" class="mb-4 rounded-full h-24 w-24 object-cover">
+            <p id="searchMessage" class="text-lg mb-4"></p>
+            <button id="closeModalBtn" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Close</button>
+        </div>
+    </div>
+
+
+    <!-- ======================= JAVASCRIPT ======================= -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // --- BROWSING HISTORY SLIDER LOGIC ---
+            const historyContainer = document.getElementById('historyContainer');
+            const historyPrevBtn = document.getElementById('historyPrevBtn');
+            const historyNextBtn = document.getElementById('historyNextBtn');
+            
+            const historyItems = [
+                { name: 'Mobiles & Accessories', img: 'box4_image.jpg' },
+                { name: 'Beauty picks', img: 'box5_image.jpg' },
+                { name: 'For your furry friends', img: 'box6_image.jpg' },
+                { name: 'New toys & games', img: 'box7_image.jpg' },
+                { name: 'New arrivals in Fashion', img: 'box8_image.jpg' },
+                { name: 'Upgrade your closet', img: 'box1_image.jpg' },
+                { name: 'Health & Personal Care', img: 'box2_image.jpg' },
+                { name: 'Discover home furniture', img: 'box3_image.jpg' }
+            ];
+
+            historyItems.forEach(item => {
+                const itemEl = document.createElement('div');
+                itemEl.className = 'flex-shrink-0 w-48 text-center';
+                itemEl.innerHTML = `
+                    <img src="${item.img}" alt="${item.name}" class="h-40 w-full object-cover rounded-md mb-2">
+                    <p class="font-semibold text-blue-600 hover:underline cursor-pointer">${item.name}</p>
+                `;
+                historyContainer.appendChild(itemEl);
+            });
+
+            historyNextBtn.addEventListener('click', () => {
+                historyContainer.scrollBy({ left: 300, behavior: 'smooth' });
+            });
+            historyPrevBtn.addEventListener('click', () => {
+                historyContainer.scrollBy({ left: -300, behavior: 'smooth' });
+            });
+
+
+            // --- SEARCH BAR LOGIC ---
+            const searchButton = document.getElementById('searchButton');
+            const searchInput = document.getElementById('searchInput');
+            const searchModal = document.getElementById('searchModal');
+            const searchMessage = document.getElementById('searchMessage');
+            const closeModalBtn = document.getElementById('closeModalBtn');
+
+            function showSearchModal(message) {
+                searchMessage.textContent = message;
+                searchModal.classList.remove('hidden');
+            }
+
+            function hideSearchModal() {
+                searchModal.classList.add('hidden');
+            }
+
+            searchButton.addEventListener('click', () => {
+                const query = searchInput.value.trim();
+                if (query) {
+                    showSearchModal(`You searched for: "${query}"`);
+                } else {
+                    showSearchModal('Please enter a search term.');
+                }
+            });
+
+            closeModalBtn.addEventListener('click', hideSearchModal);
+            searchModal.addEventListener('click', function(event) {
+                if (event.target === searchModal) {
+                    hideSearchModal();
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
